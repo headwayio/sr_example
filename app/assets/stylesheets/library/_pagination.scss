@@ -1,0 +1,17 @@
+.pagination .current {
+    background: $primary-color;
+    color: #fefefe;
+    cursor: default;
+    padding: 0.5rem .750rem;
+    border-radius: 5px;
+}
+.pagination li {
+  font-size: 1rem;
+}
+.pagination a, .pagination button {
+  padding: 0.5rem .750rem;
+}
+
+.pagination {
+  margin-top: 20px;
+}

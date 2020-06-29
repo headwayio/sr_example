@@ -1,0 +1,12 @@
+Description:
+  Headway Locale generator creates locale files, application configuration, and
+  helpers. Locale file location and application configuration support lazy
+  lookup.
+
+Example:
+    rails generate locale home
+
+    This will create:
+      app/helpers/i18n_helper.rb
+      config/initializers/i18n.rb
+      config/locales/views/home/en.yml

@@ -1,0 +1,87 @@
+.box {
+	&.square{
+    border-radius: 0;
+  }
+	border-radius: 4px;
+  // min-height: 80px;
+  min-width: 100px;
+  margin-top: 25px;
+	margin-bottom: 25px;
+	padding: 16px;
+
+  &.dashed {
+	   border: 2px dashed #D3D3D3;
+	   border-radius: 4px;
+  }
+  &.shadowed {
+    background: white;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.12);
+  }
+	&.stroked {
+    background: white;
+		border: 1px solid #D5D5D4;
+  }
+  &.announce {
+  	background-color: #f3f3f3;
+    padding: 25px;
+    text-align: center;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+	&.previously-selected {
+		border: 2px solid #C1E5FF;
+	}
+	&.selected-activity {
+		border: 2px solid $primary-color;
+	}
+	&.selected {
+		background: #EFF8FF;
+		border: 2px solid #C1E5FF;
+	}
+	&.comment {
+		margin: 0px;
+		overflow: auto;
+	}
+  &.table{
+    padding-top: 0px !important;
+    padding-right: 0px !important;
+    padding-bottom: 0px !important;
+    padding-left: 0px !important;
+    margin-top: 0px !important;
+    margin-right: 0px !important;
+    margin-bottom: 0px !important;
+    margin-left: 0px !important;
+  }
+}
+.header {
+  color: white;
+  border-radius: 4px 4px 0px 0px;
+  width: 100%;
+
+	&.header-primary {
+		background: $primary-color !important;
+	}
+	&.header-secondary {
+		background: $secondary-color !important;
+	}
+	&.header-tertiary {
+		background: $dark-green !important;
+	}
+
+	button:hover, .button:hover {
+		background: lighten($secondary-color, 50%)
+	}
+
+  h2 {
+    line-height: 1.4;
+    margin-top: 48px;
+    margin-bottom: 18px;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  button, .button {
+    margin: 0px;
+  }
+}

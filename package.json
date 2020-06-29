@@ -1,0 +1,19 @@
+{
+  "name": "stimulus_cable_ready",
+  "private": true,
+  "dependencies": {
+    "@rails/ujs": "^6.0.3-2",
+    "@rails/webpacker": "5.1.1",
+    "foundation-sites": "^6.6.3",
+    "jquery": "^3.5.1",
+    "stimulus": "^1.1.1",
+    "stimulus_reflex": "^3.2.3",
+    "turbolinks": "^5.2.0"
+  },
+  "devDependencies": {
+    "readline-sync": "^1.4.10",
+    "shelljs": "^0.8.4",
+    "tailwindcss": "^1.4.6",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

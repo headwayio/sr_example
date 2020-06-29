@@ -1,0 +1,25 @@
+.card {
+  border-radius: 4px;
+	margin-bottom: 25px;
+  background: white;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.12);
+  justify-content: center;
+
+  a {
+    padding: 25px;
+    color: #414141;
+    font-weight: bold;
+  }
+
+  &:hover, &.selected {
+    background: $primary-color;
+    color: white;
+
+    a {
+      color: white;
+    }
+  }
+}
+.dropdown-pane {
+  color: #414141;
+}

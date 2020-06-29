@@ -1,0 +1,15 @@
+div.flex.flex-col.h-70p.mx-4 data-controller='chat'
+  div.container.flex.h-70p.flex-col-reverse.overflow-scroll.bg-white.mt-4.rounded
+    - messages.map do |message|
+      div[class="#{current_user.id == message.user_id ? 'flex flex-col self-end' : 'flex flex-col self-start'}"]
+        div[class="#{current_user.id == message.user_id ? 'mr-3 self-end' : 'ml-3 self-start'}"]
+          = users.find{|user| user.id == message.user_id}.first_name
+        div [class="#{current_user.id == message.user_id ? 'm-2 p-1 bg-blue-300 rounded-md' : 'm-2 p-1 bg-gray-300 rounded-md'}"]
+          = message.message
+
+  div.mb-4
+    = form_with model: @message do |form|
+      div.mb-4.rounded-md
+        = form.label :message
+        = form.text_field :message
+        = form.submit "Message", data: { action: "click->chat#create_message" }

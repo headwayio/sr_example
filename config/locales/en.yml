@@ -1,0 +1,43 @@
+en:
+  date:
+    formats:
+      default:
+        '%m/%d/%Y'
+      short:
+        '%m/%d/%y'
+      with_weekday:
+        '%a %m/%d/%y'
+      for_js_date_picker:
+        '%m/%d/%Y'
+  time:
+    formats:
+      default:
+        '%a, %b %-d, %Y at %r'
+      date:
+        '%b %-d, %Y'
+      short:
+        '%B %d'
+      time_with_period:
+        '%-l:%M %p'
+      date_and_time_with_period:
+        '%m/%d/%Y - %-l:%M %p'
+      for_js_picker:
+        '%m/%d/%Y %I:%M %p'
+
+  titles:
+    application: A future of rails
+
+  administrate:
+    actions:
+      new: 'New'
+      show: 'show'
+
+  activerecord:
+    errors:
+      messages:
+        blank: "Can't be blank"
+      models:
+        user:
+          attributes:
+            email:
+              taken: An account exists with this email. Try signing in or resetting your password

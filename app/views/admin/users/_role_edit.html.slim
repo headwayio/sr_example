@@ -1,0 +1,4 @@
+ = label_tag 'roles', 'Roles'
+  - for role in roles
+    = radio_button_tag "user[roles]", role, user.roles.include?(role), { name: 'user[roles][]', style: 'margin: 0px;' }
+    = label_tag "user_roles_#{role}", role.to_s.humanize, style: 'position: relative; top: -5px;'

@@ -1,0 +1,185 @@
+a.button, button.button, input.button {
+  background: $primary-color;
+  color: white;
+  border-radius: 100px !important;
+  font-weight: bold;
+  height: 40px !important;
+
+  &.full-width, &.fill-parent{
+    display: block;
+    width: 100%;
+  }
+
+  &:hover {
+    color: lighten($primary-color, 20%);
+  }
+
+  &.large { line-height: 0.2; }
+  &.small { line-height: 1.6; }
+  &.tiny { line-height: 2.2; }
+
+  .hollow, &.hollow {
+    border-color: $primary-color;
+    color: $primary-color !important;
+    background: transparent !important;
+
+    &:hover {
+      border-color: lighten($primary-color, 20%);
+      background: transparent !important;
+    }
+
+    .primary, &.primary {
+      border-color: $primary-color;
+      color: $primary-color !important;
+      background: transparent !important;
+      &:hover {
+        border-color: lighten($primary-color, 20%);
+        background: transparent !important;
+      }
+    }
+    .secondary, &.secondary {
+      border-color: $secondary-color;
+      color: $secondary-color !important;
+      background: transparent !important;
+
+      &:hover {
+        border-color: lighten($secondary-color, 20%);
+        background: transparent !important;
+      }
+    }
+    .success, &.success {
+      border-color: $dark-green;
+      color: $dark-green !important;
+      background: transparent !important;
+
+      &:hover {
+        border-color: lighten($dark-green, 20%);
+        background: transparent !important;
+      }
+    }
+    .alert, &.alert {
+      border-color: $red;
+      color: $red !important;
+      background: transparent !important;
+
+      &:hover {
+        border-color: lighten($red, 20%);
+        background: transparent !important;
+      }
+    }
+    .warning, &.warning {
+      border-color: $gold;
+      color: $gold !important;
+      background: transparent !important;
+
+      &:hover {
+        border-color: lighten($gold, 20%);
+        background: transparent !important;
+      }
+    }
+  }
+
+  .clear, &.clear {
+    border-color: transparent;
+    background: transparent !important;
+    text-decoration: underline;
+    color: $primary-color;
+
+    &:hover {
+      color: lighten($primary-color, 20%) !important;
+      background: transparent !important;
+    }
+
+    .primary, &.primary {
+      color: $primary-color !important;
+      background: transparent !important;
+    }
+    .secondary, &.secondary {
+      color: $secondary-color !important;
+      background: transparent !important;
+
+      &:hover {
+        color: lighten($secondary-color, 20%) !important;
+        background: transparent !important;
+      }
+    }
+    .success, &.success {
+      color: $dark-green !important;
+      background: transparent !important;
+
+      &:hover {
+        color: lighten($dark-green, 20%) !important;
+        background: transparent !important;
+      }
+    }
+    .alert, &.alert {
+      color: $red !important;
+      background: transparent !important;
+
+      &:hover {
+        color: lighten($red, 20%) !important;
+        background: transparent !important;
+      }
+    }
+    .warning, &.warning {
+      color: $gold !important;
+      background: transparent !important;
+
+      &:hover {
+        color: lighten($gold, 20%) !important;
+        background: transparent !important;
+      }
+    }
+  }
+
+  .primary, &.primary {
+    background: $primary-color !important;
+    color: white !important;
+
+    &:hover {
+      background: lighten($primary-color, 10%) !important;
+    }
+  }
+  .secondary, &.secondary {
+    background: $secondary-color !important;
+    color: white !important;
+
+    &:hover {
+      background: lighten($secondary-color, 10%) !important;
+    }
+  }
+  .success, &.success {
+    background: $dark-green !important;
+    color: white !important;
+
+    &:hover {
+      background: lighten($dark-green, 10%) !important;
+    }
+  }
+  .alert, &.alert{
+    background: $red !important;
+    color: white !important;
+
+    &:hover {
+      background: lighten($red, 10%) !important;
+    }
+  }
+  .warning, &.warning {
+    background: $gold !important;
+    color: white !important;
+
+    &:hover {
+      background: lighten($gold, 10%) !important;
+    }
+  }
+  .white, &.white {
+    background: white !important;
+    color: #414141;
+    font-weight: bold;
+
+    &:hover {
+      background: #414141 !important;
+      color: #FFFFFF;
+    }
+  }
+}

@@ -1,0 +1,5 @@
+
+syntastic: --require features/step_definitions --format pretty --tags ~@wip CUCUMBER_PROFILE='syntastic'
+default:   --require features                  --format pretty --tags ~@wip
+wip:       --require features                  --tags @wip:3 --wip
+rerun:     --require features                  --format progress features --format rerun --out rerun.txt --strict --tags ~@wip

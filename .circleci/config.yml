@@ -1,0 +1,76 @@
+# Ruby CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-ruby/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+       - image: circleci/ruby:2.7.1-node-browsers
+         environment:
+           PGHOST: 127.0.0.1
+           PGUSER: stimulus_cable_ready_test
+           RAILS_ENV: test
+       - image: circleci/postgres:10.3-alpine
+         environment:
+           POSTGRES_USER: stimulus_cable_ready_test
+           POSTGRES_DB: stimulus_cable_ready_test
+           POSTGRES_PASSWORD: ""
+       - image: redis:4.0.9
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+      - run: cp .env.example .env
+      # Download and cache dependencies
+      - run: gem update bundler
+      - restore_cache:
+          keys:
+            - gem-cache-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+            - gem-cache-{{ .Branch }}
+            - gem-cache
+      - run: bundle install --jobs=4 --retry=3 --path vendor/bundle
+      - save_cache:
+          key: gem-cache-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+      - save_cache:
+          key: gem-cache-{{ .Branch }}
+          paths:
+            - vendor/bundle
+      - save_cache:
+          key: gem-cache
+          paths:
+            - vendor/bundle
+
+      # Database setup
+      - run: bundle exec rake db:create
+      - run: bundle exec rake db:migrate
+
+      # Precompile testing JS bundle
+      - run: yarn
+      # @TODO: cache these deps
+      - run: NODE_ENV=test bundle exec rails webpacker:compile
+
+
+      # run tests!
+      - run:
+          name: run specs
+          command: |
+            mkdir /tmp/test-results
+            TEST_FILES="$(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)"
+            COVERAGE=true bundle exec rspec --format progress --format RspecJunitFormatter -o /tmp/test-results/rspec/results.xml
+      - run:
+          name: run cukes
+          command: |
+            bundle exec cucumber --format junit --out /tmp/test-results/junit.xml
+      - run:
+          name: check for gem vulnerabilities
+          command: bundle exec rake bundle:audit
+
+      - store_artifacts:
+          path: /home/circleci/repo/coverage
+
+      - store_test_results:
+          path: /tmp/test-results/

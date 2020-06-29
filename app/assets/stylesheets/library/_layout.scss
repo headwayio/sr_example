@@ -1,0 +1,19 @@
+body, body.devise_customizations-registrations-edit {
+  background: #F4F4F4;
+}
+body {
+  background: #F2F2F2;
+}
+body.devise {
+  background: #F2F2F2;
+}
+body.devise_customizations-registrations-edit {
+  background: #ECECEC;
+}
+body.check_in_surveys-create, body.check_out_surveys-create {
+  background: $secondary-color;
+  color: white !important;
+  a, p {
+    color: white;
+  }
+}

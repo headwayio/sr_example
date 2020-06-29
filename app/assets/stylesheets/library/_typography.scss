@@ -1,0 +1,204 @@
+body {
+  font-size: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+body, caption, th, td, input, textarea, select, option, legend, fieldset, h1, h2, h3, h4, h5, h6 {
+  font-size-adjust: 0.5;
+  font-family: 'Roboto', sans-serif;
+}
+
+#page {
+  font-size: 1em;
+  /* equivalent to 16px */
+  line-height: 1.25;
+  /* equivalent to 20px */
+}
+
+@media (min-width: 43.75em) {
+  #page {
+    font-size: 1em;
+    /* equivalent to 16px */
+    line-height: 1.375;
+    /* equivalent to 22px */
+  }
+}
+
+.text {
+  &.center {
+    text-align: center;
+  }
+  &.large {
+    font-size: 24px;
+  }
+  &.bold {
+    font-weight: bold;
+  }
+}
+
+h1 {
+  font-size: 2em;
+  /* 2x body copy size = 32px */
+  line-height: 1.25;
+	font-family: "Roboto";
+	font-weight: bold;
+  /* 45px / 36px */
+}
+
+@media (min-width: 43.75em) {
+  h1 {
+    font-size: 2.5em;
+    /* 2.5x body copy size = 40px */
+    line-height: 1.125;
+  }
+}
+
+@media (min-width: 56.25em) {
+  h1 {
+    font-size: 3em;
+    /* 3x body copy size = 48px */
+    line-height: 1.05;
+    /* keep to a multiple of the 20px line height and something more appropriate for display headings */
+  }
+}
+
+h2 {
+  font-size: 1.625em;
+  /* 1.625x body copy size = 26px */
+  line-height: 1.15384615;
+	color: #1D1D1D;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+@media (min-width: 43.75em) {
+  h2 {
+    font-size: 2em;
+    /* 2x body copy size = 32px */
+    line-height: 1.25;
+  }
+}
+
+@media (min-width: 56.25em) {
+  h2 {
+    font-size: 2.25em;
+    /* 2.25x body copy size = 36px */
+    line-height: 1.25;
+  }
+}
+
+h3 {
+  font-size: 1.375em;
+  /* 1.375x body copy size = 22px */
+  line-height: 1.13636364;
+	color: $primary-color;
+	font-family: 'Roboto', sans-serif;
+	font-size: 24px;
+  font-weight: bold;
+	line-height: 32px;
+  /* 25px / 22px */
+}
+
+@media (min-width: 43.75em) {
+  h3 {
+    font-size: 1.5em;
+    /* 1.5x body copy size = 24px */
+    line-height: 1.25;
+  }
+}
+
+@media (min-width: 56.25em) {
+  h3 {
+    font-size: 1.75em;
+    /* 1.75x body copy size = 28px */
+    line-height: 1.25;
+  }
+}
+
+h4, a h4 {
+  font-size: 1.125em;
+  /* 1.125x body copy size = 18px */
+  line-height: 1.11111111;
+  color: $primary-color;
+  font-weight: bold;
+  line-height: 22px;
+}
+
+@media (min-width: 43.75em) {
+  h4 {
+    line-height: 1.22222222;
+    /* (22px / 18px */
+  }
+}
+h4.tiny {
+  font-size: 1em;
+  color: #090909;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+blockquote {
+  font-size: 1.25em;
+  /* 20px / 16px */
+  line-height: 1.25;
+  /* 25px / 20px */
+}
+
+@media (min-width: 43.75em) {
+  blockquote {
+    font-size: 1em;
+    /* 24px / 16px = */
+    line-height: 1.45833333;
+    /* 35px / 24px */
+  }
+}
+p, ul, ol, li {
+	color: $dark;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+}
+p.small {
+  font-size: 12px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  line-height: 12px;
+}
+p.large {
+  font-size: 16px;
+  padding-bottom: 10px;
+  margin-bottom: 0px;
+  line-height: 20px;
+}
+span.date {
+	color: #9B9B9B;
+	font-family: 'Roboto', sans-serif;
+	font-size: 11px;
+	font-style: italic;
+	line-height: 13px;
+}
+.strong {
+  font-weight: bold;
+}
+.italic {
+  font-style: italic;
+}
+.underline {
+  text-decoration: underline;
+}
+.font-size-12 {
+  font-size: 12px;
+}
+a.sort_link, td.org_name, .with_links a {
+  color: $dark;
+}
+.text-left {text-align: left !important;}
+.text-right {text-align: right !important;}
+
+a {
+  color: $primary-color;
+
+  &:hover {
+    color: lighten($primary-color, 20%);
+  }
+}

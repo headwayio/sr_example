@@ -1,0 +1,455 @@
+.ui-kit
+  h1 Voyage
+  h4 Style Guide
+  hr
+
+  .content
+    ul.side-nav
+      - keys = %w[avatar box branding button card chart components]
+      - keys += %w[form graphs heading icons label modal navigation]
+      - keys += %w[pagination progressbar table tooltip typography search]
+
+      - keys.each do |key|
+        = active_link_to key.capitalize, "##{key}", wrap_tag: 'li'
+
+    .sections.cell
+      #avatar.section
+        h1 Avatar
+        hr
+        .avatar.avatar-xlarge
+        .avatar.avatar-large
+        .avatar.avatar-medium
+        .avatar.avatar-small
+      #box.section
+        h1 Box
+        hr
+        .grid-x.grid-margin-x
+          .small-12.float-left.box.dashed.cell
+            .padding-50.text-center
+              h4.strong Title
+              p.padding-t-25 Description
+              a.button.primary.large.margin-10[href="#"] Button
+          .small-12.float-left.box.shadowed.cell
+            .header
+              h2 Shadowed Header Primary
+          .small-12.float-left.box.shadowed.stroked.cell
+            .header
+              h2 Shadowed Header with Stroke
+          .small-12.box.announce.cell
+            p.padding-50 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dapibus sapien eu leo vestibulum, ac eleifend orci lacinia. Aenean et dui vel urna laoreet posuere at vitae tortor.
+          .small-12.box.primary-bg.cell
+            p.padding-50 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dapibus sapien eu leo vestibulum, ac eleifend orci lacinia. Aenean et dui vel urna laoreet posuere at vitae tortor.
+      #branding.section
+        h1 Branding
+        hr
+        = link_to "/" do
+          = image_tag "logo.svg", class:"show-for-large logo margin-10"
+
+      #button.section
+        h1 Buttons
+        hr
+        .grid-x.grid-padding-x
+          .small-12
+            h5 Button Styles
+            .div
+              a.button.primary.margin-10[href="#"] Primary
+              button.hollow.button.margin-10[href="#"] Primary
+              a.clear.button.margin-10[href="#"] Primary
+            .div
+              a.button.secondary.margin-10[href="#"] Secondary
+              button.hollow.button.secondary.margin-10[href="#"] Secondary
+              a.clear.button.secondary.margin-10[href="#"] Secondary
+            .div
+              a.button.success.margin-10[href="#"] Success
+              button.hollow.button.success.margin-10[href="#"] Success
+              a.clear.button.success.margin-10[href="#"] Success
+            .div
+              a.button.alert.margin-10[href="#"] Alert
+              button.hollow.button.alert.margin-10[href="#"] Alert
+              a.clear.button.alert.margin-10[href="#"] Alert
+            .div
+              a.button.warning.margin-10[href="#"] Warning
+              button.hollow.button.warning.margin-10[href="#"] Warning
+              a.clear.button.warning.margin-10[href="#"] Warning
+            .div
+              button.hollow.button.margin-10[href="#" disabled] Disabled
+              a.clear.button.margin-10[href="#" disabled] Disabled
+
+          hr
+          .small-12.padding-t-50
+            h5 Button Sizes
+            a.button.primary.large.margin-10[href="#"] So Large
+            a.button.primary.margin-10[href="#"] So Basic
+            a.button.primary.small.margin-10[href="#"] So Small
+            a.button.primary.tiny.margin-10[href="#"] So Tiny
+
+            a.button.primary.expanded.margin-10[href="#"] Such Expand
+            a.button.primary.small.expanded.margin-10[href="#"] Wow, Small Expand
+            hr
+          .small-12.padding-t-50
+            h5 Dropdown Buttons
+            button.dropdown.button.primary.large.margin-10 Dropdown Button
+            button.dropdown.button.primary.margin-10 Dropdown Button
+            button.dropdown.button.primary.small.margin-10 Dropdown Button
+            button.dropdown.button.primary.tiny.margin-10 Dropdown Button
+            button.dropdown.button.primary.expanded.margin-10 Dropdown Button
+
+      #card.section
+        h1 Card
+        hr
+        .grid-x.grid-margin-x.grid-margin-y
+        .small-12.medium-6.float-left.cell
+          .grid-x
+            .small-12.float-left.box.shadowed.stroked.cell
+              .header
+                h2 Event Details
+
+              .form-input.padding-25-overflow-visible
+                .grid-x.grid-margin-x
+                  .small-12.medium-6.cell
+                    input.selectize-create
+
+      #chart.section
+        h1 Charts
+        hr
+        .progress.success[role="progressbar" tabindex="0" aria-valuenow="59" aria-valuemin="0" aria-valuemax="100"]
+        .progress.alert{8, 3}
+        .progress[role="progressbar" tabindex="0" aria-valuenow="50" aria-valuemin="0" aria-valuetext="50 percent" aria-valuemax="100"]
+          .progress-meter[style="width: 50%"]
+        .progress.success[role="progressbar" tabindex="0" aria-valuenow="50" aria-valuemin="0" aria-valuetext="50 percent" aria-valuemax="100"]
+          .progress-meter[style="width: 50%"]
+        .progress.alert[role="progressbar" tabindex="0" aria-valuenow="50" aria-valuemin="0" aria-valuetext="50 percent" aria-valuemax="100"]
+          .progress-meter[style="width: 50%"]
+
+      #form.section
+        h1 Form
+        hr
+        h4 Inputs
+        .form-input.padding-10
+            label
+              | Input Label
+              input[type="input" name="vehicle" value="" placeholder=""]
+        .form-input.padding-10
+            label
+              | Disabled Input
+              input[type="input" name="vehicle" value="Disabled" placeholder="" disabled]
+        .form-input.padding-10
+            label.error
+              | Failed Input
+              input[type="input" class="error" name="vehicle" value="An Error Value" placeholder=""]
+        h4 Checkboxes
+        .form-input.padding-10
+            label
+              input[type="checkbox" name="vehicle" value=""]
+              | He's making a list
+            label
+              input[type="checkbox" name="vehicle" value=""]
+              | And checking it twice
+        h4 Radio Buttons
+        .form-input.padding-10
+            label
+              input[type="radio" name="presenter-2" value=""]
+              | Agree
+            label
+              input[type="radio" name="presenter-2" value=""]
+              | Disagree
+        h4 Switch / Toggle
+        .margin-t-25
+          .switch.tiny
+            input#tinySwitch.switch-input[type="checkbox" name="exampleSwitch"]
+            label.switch-paddle[for="tinySwitch"]
+              span.show-for-sr
+                | Tiny Sandwiches Enabled
+        .margin-t-25
+          .switch.small
+            input#smallSwitch.switch-input[type="checkbox" name="exampleSwitch"]
+            label.switch-paddle[for="smallSwitch"]
+              span.show-for-sr
+                | Tiny Sandwiches Enabled
+        .margin-t-25
+          .switch.large
+            input#largeSwitch.switch-input[type="checkbox" name="exampleSwitch"]
+            label.switch-paddle[for="largeSwitch"]
+              span.show-for-sr
+                | Tiny Sandwiches Enabled
+      #heading.section
+        h1 Heading
+        hr
+        .sub-header
+          h4 Sample Header
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dapibus sapien eu leo vestibulum, ac eleifend orci lacinia. Aenean et dui vel urna laoreet posuere at vitae tortor.
+      #icons.section
+        h1 Icons
+        hr
+        .icons
+          .add-icon.icon.shrink
+          .budget-icon.icon.shrink
+          .calendar-icon.icon.shrink
+          .close-icon.icon.shrink
+          .info-icon.icon
+          .jpg-icon.icon
+          .menu-icon.icon.shrink
+        .break
+          .organization-icon.icon.shrink
+          .pdf-icon.icon
+          .request-icon.icon.shrink
+          .search-icon.icon.shrink
+          .setting-icon.icon.shrink
+          .template-icon.icon.shrink
+          .warn-icon.icon
+
+
+      #label.section
+        h1 Label
+        hr
+        span.label Label
+        span.label.primary Label
+        span.label.secondary Label
+        span.label.warning Label
+        span.label.info Label
+        span.label.success Label
+        span.label.danger Label
+      #modal.section
+        h1 Modal
+        hr
+        #exampleModal1.reveal[data-reveal]
+          .text-center
+            h3.dark Your request has been submitted. Someone will be in contact with you within two weeks.
+            p.lead Thanks again!
+            p We're excited about the opportunity to help you serve others through supporting your event and organization.
+            .small-12
+              a.button.primary.medium.margin-t-50 [data-close aria-label="Close modal"]
+                span[aria-hidden="true"] Close Window
+            button.close-button.hollow[data-close aria-label="Close modal" type="button"]
+              span[aria-hidden="true"] ×
+
+        p
+          button.button[data-open="exampleModal1"] Click me for a modal
+      #navigation.section
+        h1 Navigation
+        hr
+        .box.stroked.no-fill
+          ul.secondary-nav
+            li
+              a New Requests
+            li
+              a My Requests
+            li
+              a External Review
+            li
+              a Group Review
+            li
+              a All Requests
+            li
+              a Payment
+            li
+              a Archives
+        .box.stroked.no-fill
+          .grid-x.grid-padding-x
+            .small-6.medium-6.left.text-left.cell
+              h4.dark.margin-t-10 Donation Request Format
+            .small-6.medium-6.left.text-right.cell
+              a.button.hollow.margin-b-0.margin-lr-10 Save & Exit
+              a.button.primary.margin-b-0 Submit
+        = render partial: "components/footer"
+
+      #pagination.section
+        h1 Pagination
+        hr
+        .grid-x
+          ul.pagination[aria-label="Pagination" role="pagination"]
+            li.current
+              | 1
+            li
+              a[rel="next" href="/ci_team/requests?page=2"]
+                | 2
+            li
+              a[href="/ci_team/requests?page=3"]
+                | 3
+            li
+              a[href="/ci_team/requests?page=4"]
+                | 4
+            li
+              a[rel="next" href="/ci_team/requests?page=2"]
+                | Next ›
+            li
+              a[href="/ci_team/requests?page=4"]
+                | Last »
+
+      #progressbar.section
+        h1 Progress Bar
+        hr
+
+        ul.progressbar.request.without_counter
+          li.completed
+            | New Request
+            span.date 10/10/17
+          li.completed
+            | Assigned
+            span.date 10/10/17
+          li.current Approved/Declined
+          li.disabled Completed/P.O.P. Attached
+          li.disabled Payment Recorded
+          li.disabled Archived
+
+        ul.progressbar.guest.padding-t-100
+          li.completed
+            | Organization
+            span.date 10/10/17
+          li.completed
+            | Eligibility
+            span.date 10/10/17
+          li.current Event Details
+          li.disabled Review
+
+      #table.section
+        h1 Table
+        hr
+        .grid-x
+          table.columns
+                thead
+                  tr
+                    th Description
+                    th.text-center Agree
+                    th.text-center Disagree
+                    th.text-center Strongly Disagree
+
+                tbody
+                    tr
+                      td.statement
+                        p.small Description 1
+                      td.text-center
+                        input[type="radio" name="presenter-1" value=""]
+                      td.text-center
+                        input[type="radio" name="presenter-1" value=""]
+                      td.text-center
+                        input[type="radio" name="presenter-1" value=""]
+                    tr
+                      td.statement
+                        p.small Description 2
+                      td.text-center
+                        input[type="radio" name="presenter-2" value=""]
+                      td.text-center
+                        input[type="radio" name="presenter-2" value=""]
+                      td.text-center
+                        input[type="radio" name="presenter-2" value=""]
+        .grid-x
+          table.columns
+              thead
+                tr
+                  th Status
+                  th Type
+                  th Store
+                  th Request ID
+                  th Event Date
+                  th Date Submitted
+                  th Event Name
+                  th Organizations
+                  th Assigned To
+
+              tbody
+                  tr
+                    td New (Verified)
+                    td Donation
+                    td Eau Claire
+                    td= (2451..10110).to_a.sample
+                    td 01/18/2018
+                    td 11/08/2017
+                    td Safety Training Day
+                    td Altoona Police Department
+                    td Sam F.
+      #tooltip.section
+        h1 Tooltip
+        hr
+        h4 Buttons
+
+        a.button.primary.medium.has-tip.alert[data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="1" title="Fancy word for a beetle." data-position="bottom" data-alignment="left"] Bottom Left
+
+        a.button.primary.medium.has-tip[data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="1" title="Fancy word for a beetle." data-position="bottom" data-alignment="center"] Bottom Center
+
+        a.button.primary.medium.has-tip[data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="1" title="Fancy word for a beetle." data-position="bottom" data-alignment="right"] Bottom Right
+
+        a.button.primary.medium.has-tip[data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="1" title="Fancy word for a beetle." data-position="top" data-alignment="left"] Top Left
+
+        a.button.primary.medium.has-tip[data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="1" title="Fancy word for a beetle." data-position="top" data-alignment="center"] Top Center
+
+        a.button.primary.medium.has-tip[data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="1" title="Fancy word for a beetle." data-position="top" data-alignment="right"] Top Right
+
+        a.button.primary.medium.has-tip[data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="1" title="Fancy word for a beetle." data-position="right" data-alignment="top"] Right Top
+
+        a.button.primary.medium.has-tip[data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="1" title="Fancy word for a beetle." data-position="left" data-alignment="top"] Left Top
+
+        a.button.primary.medium.has-tip[data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="1" title="Fancy word for a beetle." data-position="right" data-alignment="center"] Right Center
+
+        a.button.primary.medium.has-tip[data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="1" title="Fancy word for a beetle." data-position="left" data-alignment="center"] Left Center
+
+        a.button.primary.medium.has-tip[data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="1" title="Fancy word for a beetle." data-position="right" data-alignment="bottom"] Right Bottom
+
+        a.button.primary.medium.has-tip[data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="1" title="Fancy word for a beetle." data-position="left" data-alignment="bottom"] Left Bottom
+
+        h4 Text Based
+
+        span.has-tip.top[data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="2" title="A tool used for cutting crops."] Text based tooltip on top.
+        br
+        span.has-tip.right[data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="2" title="A tool used for cutting crops."] Text based tooltip on right.
+        br
+        span.has-tip.left[data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="2" title="A tool used for cutting crops."] Text based tooltip on left.
+        br
+        span.has-tip.bottom[data-tooltip aria-haspopup="true" data-disable-hover="false" tabindex="2" title="A tool used for cutting crops."] Text based tooltip on bottom.
+        br
+
+      #typography.section
+        h1 Typography
+        hr
+        h1 h1. This is a very large header.
+        h2 h2. This is a large header.
+        h3 h3. This is a medium header.
+        h3 Foundation for Sites
+          small Version 6.4.0
+        h4 h4. This is a moderate header.
+        h4.dark h4. This is a dark header.
+
+        hr
+        p Links are very standard, and the color is preset to the Foundation primary color.class_selector
+        a[href="#"]
+
+        p This is a paragraph. Paragraphs are preset with a font size, line height and spacing to match the overall vertical rhythm. To show what a paragraph looks like this needs a little more content so, did you know that there are storms occurring on Jupiter that are larger than the Earth? Pretty cool.
+
+        ul
+          li List item with a much longer description or more content.
+          li List item
+          li List item
+            ul
+              li Nested list item
+              li Nested list item
+              li Nested list item
+          li List item
+          li List item
+          li List item
+        ol
+          li Cheese (essential)
+          li Pepperoni
+          li Bacon
+            ol
+              li
+            Normal bacon
+              li
+            Canadian bacon
+          li Sausage
+          li Onions
+          li Mushrooms
+        dl
+          dt Time
+          dd The indefinite continued progress of existence and events in the past, present, and future regarded as a whole.
+          dt Space
+          dd A continuous area or expanse that is free, available, or unoccupied.
+          dd The dimensions of height, depth, and width within which all things exist and move.
+        blockquote Those people who think they know everything are a great annoyance to those of us who do.
+        cite Isaac Asimov
+      #search.section
+        h1 Search
+        hr
+        .cell.auto.search-container
+          = form_tag '/', url: request.original_url, class: 'search' do |f|
+            = image_tag 'ico-search.svg', class: 'inline-search-icon'
+            = text_field_tag :global_search_cont, params.dig(:q, :global_search_cont), placeholder: "Search Content"

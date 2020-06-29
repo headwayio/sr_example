@@ -1,0 +1,92 @@
+table {
+  margin-top: 12px;
+  margin-bottom: 5rem;
+  // table-layout: fixed;
+}
+
+td.statement {
+  width: 50%;
+}
+
+td .button{
+  margin: 0;
+}
+
+.table-filter{
+  width: 14px;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+thead th,
+thead td,
+tbody th,
+tbody td,
+tfoot th,
+tfoot td,
+{
+  padding: 8px;
+  white-space: nowrap;
+}
+
+thead th,
+thead td,
+{
+  font-weight: bold;
+  background: #d8d8d8;
+}
+tfoot th,
+tfoot td,
+{
+  background: #d8d8d8;
+}
+
+thead th,
+thead td,
+tfoot th,
+tfoot td, tr {
+  font-size: 13px;
+  font-weight: normal;
+}
+
+thead.tall tr{
+  height: 55px;
+}
+
+table.transparent {
+  thead th,
+  thead td,
+  tfoot th,
+  tfoot td,
+  thead
+  {
+    background: none !important;
+  }
+  th {
+    color: $gray;
+  }
+  tbody {
+    background: none !important;
+  }
+  thead, tbody, tfoot {
+    border: none!important;
+  }
+}
+
+td.shrink, th.shrink{
+  width: 1px;
+  white-space: nowrap;
+}
+
+td.wrap, th.wrap{
+  white-space: normal;
+}
+
+.grey-bg {
+  background-color: #f1f1f1 !important;
+}
+
+.white-bg {
+  background-color: #fff !important;
+}

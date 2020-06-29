@@ -1,0 +1,14 @@
+h2 Forgot your password?
+
+.box.shadowed
+  h4 Provide your email below to recover your password and gain access to your account.
+
+  = simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+    = f.error_notification
+    .form-inputs
+      = f.input :email, required: true, autofocus: true
+    .form-actions.show-for-medium.medium-9.large-5.padding-t-10
+      = f.button :submit, 'Send Password Reset Instructions', class: 'button secondary'
+    .form-actions.show-for-small-only.padding-t-20
+      = f.button :submit, 'Send instructions', class: 'button primary'
+  = render "devise/shared/links"

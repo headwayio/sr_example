@@ -1,0 +1,123 @@
+.left-navigation {
+  min-height: 101%;
+  padding: 0;
+  background: $primary-color;
+  color: white;
+  position: fixed;
+  z-index: 1;
+  margin-top: -20px;
+
+  &.scrollable {
+    overflow-y: scroll;
+    height:100%;
+    right: 75%;
+  }
+
+  h1 {
+    font-size: 14px !important;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+  }
+
+  ul li {
+    padding: 20px 0px;
+  }
+
+  ul li, ul li a {
+    color: white;
+    font-weight: bold;
+    display: block;
+    img {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  hr {
+    border-bottom: 2px solid #FFF !important;
+  }
+
+  img, button {
+    padding-right: 10%;
+  }
+
+  .menu {
+    justify-content: space-between;
+  }
+}
+
+.small-menu {
+  text-align: center;
+  width: 60px !important;
+  margin-left: -20px; // Equal to the .content-inside padding
+
+  li{
+    text-align: center;
+  }
+}
+
+.float-for-nav {
+  @media screen{
+    padding-left: 60px !important;
+  }
+}
+
+.section {
+  padding: 75px 0px;
+  clear: both;
+}
+
+.ui-kit {
+  padding: 40px 40px 0 40px;
+  hr { border-bottom: 7px solid #e2e2e2; }
+
+  .content {
+    display: flex;
+    .side-nav {
+      flex: 1;
+      background-color: #CCC;
+      padding: 20px;
+      margin: 0;
+      list-style: none;
+      a { color: black; }
+      a:hover { color: $primary-color; }
+    }
+    .sections {
+      flex: 5;
+      margin-left: 60px;
+    }
+  }
+
+  [type="radio"] {
+    margin-top: 0;
+  }
+}
+
+.icons {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 10%;
+}
+
+.break {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.icon-fill {
+  fill: #66B247;
+}
+
+input[type="radio"]{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}

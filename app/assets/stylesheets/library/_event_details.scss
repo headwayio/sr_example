@@ -1,0 +1,10 @@
+.file {
+  text-decoration: underline;
+}
+
+// TODO: (2018-02-10) jon => need to fix this... important isn't the way to go
+span {
+  &.error {
+    top: 0px !important;
+  }
+}

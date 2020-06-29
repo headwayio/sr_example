@@ -1,0 +1,33 @@
+.footer {
+  background: #515150;
+  color: white;
+  position: relative;
+  z-index: 90;
+  height: 82px;
+  margin-top: -82px;
+
+  padding: 2em 20px 2em 80px;
+
+  @media (max-width: 640px) {
+    padding-left: 20px;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  ul, li {
+    list-style-type: none;
+  }
+  li {
+    float: right;
+    padding-right: 15px;
+    font-weight: bold;
+    &:first-child{
+      padding-right: 0px;
+    }
+  }
+  p {
+    margin-bottom: 0px;
+  }
+}

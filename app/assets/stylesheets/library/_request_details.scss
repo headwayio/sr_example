@@ -1,0 +1,38 @@
+.back-to-my-requests a {
+  color: #40403F;
+}
+
+.approve-modal .cell{
+  margin-left: 10px;
+  input {
+    min-width: 150px;
+  }
+}
+
+.request-name {
+  font-weight: 600;
+}
+.comment-input {
+  height: 40px;
+  font-size: 12px;
+}
+
+.comment-text{
+  padding-left: 60px;
+}
+
+.request-name-history a {
+  color: #56A737 !important;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.request-status {
+  color: #777777;
+}
+
+.comments-list, .request-history {
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 16px;
+}

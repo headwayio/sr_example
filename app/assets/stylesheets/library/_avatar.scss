@@ -1,0 +1,40 @@
+.avatar {
+  border-radius: 50%;
+  background: #fefefe image-url("avatar.svg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+
+  &-small {
+    width: 45px;
+    height: 45px;
+  }
+  &-medium {
+    width: 100px;
+    height: 100px;
+  }
+  &-large {
+    width: 125px;
+    height: 125px;
+  }
+  &-xlarge {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.user-avatar {
+  img {
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  &-small {
+    width: 45px;
+    height: 45px;
+  }
+}

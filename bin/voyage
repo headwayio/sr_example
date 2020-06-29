@@ -1,0 +1,43 @@
+#!/usr/bin/env node
+
+const shell = require('shelljs');
+const initProject = require('../lib/init_project').default;
+const readlineSync = require('readline-sync');
+
+const rl = readlineSync
+
+/**
+ * Example
+ * node bin/voyage init myapp myapplocation --monorepo --debug
+*/
+const command = process.argv[2];
+
+const debugMode = process.argv.includes('--debug') || process.argv.includes('-d')
+
+if (command == 'init') {
+
+  if (process.argv[3]) {
+    initProject(process.argv[3], buildOptions(process));
+  } else {
+    const projectName = rl.question(
+`What would you like to name the rails app? \n
+Please specify with underscores (e.g. headway_blog)`
+    )
+    initProject(projectName, debugMode);
+  }
+} else if (command == 'generate') {
+  const type = process.argv[3];
+  const name = process.argv[4];
+
+  generator(type, name);
+} else {
+  shell.echo(`Unrecognized command "${command}"`);
+}
+
+function buildOptions({argv:cliOptions}) {
+  return {
+    location: cliOptions[4] || `../${cliOptions[3]}`,
+    monorepo: cliOptions.includes('--monorepo') || cliOptions.includes('-m'),
+    debugMode: cliOptions.includes('--debug') || cliOptions.includes('-d')
+  }
+}

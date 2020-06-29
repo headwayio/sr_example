@@ -1,0 +1,16 @@
+h2 Welcome Back!
+
+.box.shadowed
+  h5.center
+    | Please sign in below
+    br
+    | or create a new one.
+
+  = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    .form-inputs
+      = f.input :email, required: false, autofocus: true, label: 'EMAIL', placeholder: 'Email'
+      = f.input :password, required: false, label: 'PASSWORD', placeholder: 'Password'
+      = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
+    .form-actions.right
+      = f.button :submit, 'Sign in', class: 'button secondary'
+  = render 'devise/shared/links'

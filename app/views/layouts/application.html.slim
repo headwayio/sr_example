@@ -1,0 +1,29 @@
+doctype html
+html[lang="en"]
+  head
+    meta[charset="utf-8"]
+    meta[name="ROBOTS" content="NOODP"]
+    meta[name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"]
+    meta[name="apple-mobile-web-app-capable" content="yes"]
+    meta[name="mobile-web-app-capable" content="yes"]
+    meta[name="apple-mobile-web-app-status-bar-style" content="black-translucent"]
+    - # Configure default and controller-, and view-specific titles in
+    - # config/locales/en.yml. For more see:
+    - # https://github.com/calebthompson/title#usage
+    title
+      = title
+    = stylesheet_link_tag :application, media: "all"
+    = stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload'
+    = render 'javascript'
+    link[rel="apple-touch-icon" href="/assets/apple-touch-icon.png"]
+    = csrf_meta_tags
+    = action_cable_meta_tag
+    = favicon_link_tag 'favicon.ico'
+  body class="#{devise_controller? ? 'devise' : 'application'} #{body_class}"
+    .outer-wrapper.min-h-full.absolute.py-20.w-full
+      = render 'components/navigation'
+      .main.flex.justify-center
+        = render 'flashes'
+        = yield
+      = render 'components/footer'
+      = render 'css_overrides'

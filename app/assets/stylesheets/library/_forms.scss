@@ -1,0 +1,566 @@
+input {
+  border-radius: 4px !important;
+  height: 50px !important;
+  border: 0px !important;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+
+  [type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], textarea {
+    border-radius: 4px;
+  }
+}
+
+input {
+  &.error {
+    border: 1px solid $red !important;
+    background-color: rgba(208,2,27,0.05) !important;
+    color: $red;
+  }
+}
+
+label {
+	color: #414141;
+	font-family: "Open Sans";
+	font-size: 14px;
+  padding: 10px 10px 10px 0;
+	line-height: 17px;
+  cursor: pointer;
+
+  &.error {
+    color: $red !important;
+  }
+}
+
+label label {
+  padding: 0px 10px 10px 0px;
+}
+
+hint {
+	color: #A7A7A7;
+	font-family: "Open Sans";
+	font-size: 11px;
+	line-height: 14px;
+  padding-left: 10px;
+}
+
+.form-input {
+  label {
+    color: #414141;
+  }
+  input {
+    border: 1px solid #D5D5D5!important;
+    background: white;
+
+    &.error {
+      border: 1px solid $red !important;
+      background-color: rgba(208,2,27,0.05) !important;
+      color: $red;
+    }
+    &:disabled {
+      border: 1px solid $dark-gray !important;
+      background-color: rgba(0, 0, 0, 0.18) !important;
+    }
+  }
+
+  &.white {
+    label {
+      color: white;
+    }
+  }
+}
+
+#top-bar input.stroke {
+  border: 1px solid #D5D5D5 !important;
+  background: white;
+}
+
+span.hint {
+  font-size: 12px;
+  font-style: italic;
+  top: -10px;
+  position: relative;
+}
+
+
+// DROPDOWN PANE AND CHECKBOXES
+.dropdown-pane {
+  position: absolute;
+  z-index: 100;
+  visibility: hidden;
+  display: none;
+  padding: 10px;
+  border:0px;
+  border-radius: 0px 0px 4px 4px;
+  background-color: #fefefe;
+  font-size: 1rem;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.12);
+  max-width: 260px;
+  cursor: pointer;
+}
+
+ul.checkable {
+  list-style-type: none;
+  float:left;
+  margin-left: 0;
+}
+
+ul.checkable li, {}
+
+.card > a > .dropdown-pane {
+  width: 100%;
+}
+
+.list-check {
+  .checkbox{
+    padding: 10px 10px 0px 17px;
+    position: relative;
+    // max-height: 45px;
+    float: left;
+    clear: left;
+    text-align: left;
+    width: 100%;
+  }
+
+  p, label{
+    float: left;
+    display: inline;
+    padding: 0px 0px 10px 0px;
+    cursor: pointer;
+    width: 100%;
+  }
+  &.collapse {
+    position: static;
+  }
+  a {
+    color: $primary-color !important;
+
+    &:hover {
+      color:#414141 !important;
+    }
+  }
+  button {
+    outline: none;
+    cursor: pointer;
+  }
+  h3 {
+    padding-left: 10px;
+  }
+}
+
+.list-check-bordered {
+  .list-check {
+    .checkbox{
+      border-bottom: 1px solid #E0E0E0;
+    }
+  }
+}
+
+textarea.bordered {
+  border: 1px solid #a5a5a5 !important;
+}
+
+textarea {
+  height: 150px;
+}
+
+[type="checkbox"] {
+	-webkit-appearance: none;
+	border: 1px solid $primary-color !important;
+	padding: 9px;
+	border-radius: 2px;
+	display: block;
+	position: relative;
+  width: 20px;
+  height: 20px !important;
+  margin-right: 0px;
+  margin-bottom: 1rem;
+  float: left;
+}
+
+[type="checkbox"]:active, [type="checkbox"]:checked:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+[type="checkbox"]:hover {
+  cursor: pointer;
+
+  label {
+    cursor: pointer;
+  }
+}
+
+[type="checkbox"]:focus {
+  border: 1px;
+}
+
+[type="checkbox"]:checked {
+	background-color: $primary-color !important;
+	border: 1px solid #51BFA0;
+}
+
+[type="checkbox"]:checked:after {
+	content: '\2714';
+	font-size: 14px;
+	position: absolute;
+	top: 0px;
+	left: 3px;
+	color: white;
+}
+
+.button-bg-trans {
+  background: transparent !important;
+}
+
+// Radio
+[type="radio"] {
+	-webkit-appearance: none;
+	padding: 9px;
+	border-radius: 50%;
+	display: inline-block;
+	position: relative;
+  width: 10px;
+  height: 10px !important;
+  border: 1px solid #a5a5a5 !important;
+  border-radius: 50% !important;
+  margin-top: 18px;
+  margin-bottom: -5px;
+  cursor: pointer;
+}
+
+[type="radio"]:active, [type="radio"]:checked:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+[type="radio"]:focus {
+  border: 1px;
+}
+
+[type="radio"]:checked {
+	background-color: $primary-color !important;
+	border: 1px solid #51BFA0;
+}
+
+[type="radio"]:checked:after {
+	font-size: 14px;
+	position: absolute;
+	top: 0px;
+	left: 3px;
+	color: white;
+}
+// END Radio
+
+.big-checkbox {
+	padding: 18px;
+}
+
+.big-checkbox:checked:after {
+	font-size: 28px;
+	left: 6px;
+}
+
+.index-checkbox{
+  padding: 0;
+  margin: 0;
+}
+
+// SELECTIZE FIXES
+.selectize-input .item{
+  // Keeps the un-selected version of a single-drop-down select the same height
+  // and prevents the page from jumping when the select is opened and closed
+  padding: 8px 0px 6px 0px;
+}
+
+.selectize-input .item{
+  white-space: nowrap;
+}
+
+.selectize-input input{
+  height: 32px !important;
+}
+
+.selectize-control.multi .selectize-input,
+.selectize-control.multi .selectize-input.has-items{
+  // Keeps the multi-select the right height on page load when empty or full
+  padding: 8px !important;
+}
+
+// Keeps margin/space for two lines tall when adding items to the multi-select
+.selectize-control.multi .selectize-input > div{
+  margin: 9px 3px 3px 0;
+}
+
+.selectize.full-width .selectize-input{
+  border: none;
+  box-shadow: none;
+}
+
+// For debugging
+// .selectize-dropdown { display: block !important; }
+
+// CI Index View
+table {
+  .selectize-input input{
+    height: 18px !important;
+  }
+  .selectize-control{
+    height: 36px;
+  }
+  .selectize-input .item{
+    padding: 0 24px 0 0;
+  }
+}
+
+table.request-index {
+  .selectize-input {
+    width: 180px;
+  }
+}
+
+.selectize-150{
+  .selectize-input {
+    width: 150px !important;
+  }
+}
+
+.selectize-225{
+  .selectize-input {
+    width: 225px !important;
+  }
+}
+
+.selectize-250{
+  .selectize-input {
+    width: 250px !important;
+    input{
+      height: 18px !important;
+    }
+    &.has-items{
+      padding: 0 0 2px 9px !important;
+    }
+  }
+}
+
+// FORM ERRORS
+.error_notification{
+  background: #ce0000;
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+
+span.error{
+  color: #ce0000;
+  position: relative;
+  top: -12px; // FIXME: (2018-02-10) jon => overridden by library/_event_details.scss#73
+  display: block;
+  margin-bottom: 24px;
+}
+
+.hint{
+  position: relative;
+  top: -12px;
+  margin-right: 10px;
+}
+
+// BOOTSTRAP DATETIMEPICKER
+.bootstrap-datetimepicker-widget {
+  z-index: 99;
+  position: absolute;
+
+  tbody tr:nth-child(even) {
+    background-color: white;
+  }
+  thead th,
+  thead td,
+  tfoot th,
+  tfoot td {
+    background: white;
+    padding: 0;
+    font-weight: bold;
+  }
+
+  thead, tbody, tfoot {
+    border: 0;
+  }
+}
+
+// TOGGLE-ABLE RADIO
+
+.radio-button-group-row {
+  margin-bottom:1rem; //to get the vert/horz center trick to work well, I have to remove the button margin, so I add it to the row instead.
+}
+
+.radio-button-group {
+  position:relative;
+  border-right:1px solid white;
+
+  input[type="radio"] {
+    -webkit-appearance: none;
+  }
+
+  input.button {
+    background: #ccc;
+    width: 100%;
+
+    &:hover {
+      background: $primary-color;
+    }
+    margin-bottom:0;
+    padding:1.25em;
+
+    &[type="radio"]:checked {
+      background: $primary-color;
+    }
+
+    + label {
+      font-size:1rem;
+      color: white;
+      position:absolute;
+      top: 63%;
+      left: 50%;
+      display:inline-block;
+      width:auto;
+      transform:translate(-50%, -50%);
+      margin-left: 0px !important;
+      margin-right: 0 !important;
+    }
+  }
+}
+
+label {
+  span.previously-selected-status {
+    float: right;
+    color: $secondary-color;
+    font-family: Arial;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px;
+    text-align: right;
+    margin-top: -8px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+  }
+}
+
+.mixed span {
+  width: 100%;
+  display: block;
+}
+
+.radio-button-group [type="radio"] {
+  border-radius: 5px !important;
+}
+
+.radio-button-group label {
+  color: white;
+  font-weight: bold;
+  position: relative;
+  width: 100%;
+  padding: 0px;
+}
+
+.radio-button-group label span {
+  top: 35px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+input:-webkit-autofill {
+  background-color: white !important;
+}
+
+
+//** SWITCH / TOGGLE **//
+.switch {
+  &.tiny {
+    width: 3.1rem;
+    height: 1.6rem;
+    font-size: 0.625rem;
+  }
+  [type="checkbox"] {
+    width: 0px;
+    height: 0px;
+  }
+  label {
+    display: block;
+  }
+}
+
+.switch-paddle {
+  background: #ffffff;
+  border: 1px solid $dark-gray;
+  border-radius: 100px;
+}
+
+input:checked ~ .switch-paddle {
+  background: #ffffff;
+  &::after {
+    background: $primary-color;
+  }
+}
+
+input:checked ~ .switch-paddle {
+  background: #ffffff;
+  &::after {
+    background: $primary-color;
+  }
+}
+
+.switch-paddle::after {
+  background: #414141;
+  border-radius: 100px;
+}
+
+
+// NEW ORGANIZATION FORM
+.submit-new-org-btn {
+  input {
+    width: 20%;
+  }
+}
+
+.guest-create-org {
+  input {
+    width: 20%;
+  }
+}
+
+.trix-content {
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+
+// Simple form required fields stylization
+abbr, abbr[title]{
+  border: none;
+  color: red;
+}
+
+// Search Form
+.search-container {
+  position: relative;
+}
+
+.search-container input{
+  padding-left: 37px;
+  margin-bottom: 20px;
+  height: 40px !important;
+}
+
+.budget-search{
+  input{
+    height: 40px !important;
+    margin-bottom: 20px;
+  }
+  select{
+    height: 40px !important;
+    margin-bottom: 20px;
+  }
+}

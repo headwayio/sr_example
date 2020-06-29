@@ -1,0 +1,14 @@
+.tooltip {
+  background-color: $white;
+  font-size: 12px;
+  color: $primary-color;
+  font-weight: 600;
+
+  .alert {
+    background-color: $red;
+  }
+}
+
+.has-tip {
+  border-bottom: none;
+}

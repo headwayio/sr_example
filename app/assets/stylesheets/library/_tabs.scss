@@ -1,0 +1,18 @@
+.tabs-title > a:focus, .tabs-title > a[aria-selected='true'], .tabs-title > a:hover {
+    background: $dark-green;
+    color: white;
+    font-weight:bold;
+}
+.tabs-title > a {
+    display: block;
+    padding: 2rem 1.5rem;
+    font-size: 1rem;
+    line-height: 1;
+    color: #414141;
+}
+.tabs {
+    margin: 0;
+    border: 0px;
+    background: #fefefe;
+    list-style-type: none;
+}

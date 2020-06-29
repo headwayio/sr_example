@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="98px" height="98px" viewBox="0 0 98 98" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>Logo Copy 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="12.1933152" y="12.25" width="73.159891" height="73.5" rx="200"></rect>
+        <path id="path-3" d="M7.04502652,71.8666665 C10.2966955,71.8666801 20.5931543,57.1666668 54.1925117,65.877778 C87.791869,74.5888891 91.0434197,59.3444444 91.0434197,59.3444444 L91.0434197,93.1 L7.04502654,93.1 C7.04502654,93.1 3.79335751,71.8666529 7.04502652,71.8666665 Z"></path>
+    </defs>
+    <g id="Home-Page-&amp;-Blog" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Home" sketch:type="MSArtboardGroup" transform="translate(-671.000000, -41.000000)">
+            <g id="Header-Info" sketch:type="MSLayerGroup">
+                <g id="Centered" transform="translate(227.000000, 41.000000)">
+                    <g id="Logo-Copy-4" transform="translate(444.000000, 0.000000)">
+                        <path d="M0,48.7667244 C0,21.8336062 21.83061,0 48.7732607,0 C75.7099888,0 97.5465214,21.8406753 97.5465214,48.7667244 L97.5465214,49.2332756 C97.5465214,76.1663938 75.7159114,98 48.7732607,98 C21.8365326,98 0,76.1593247 0,49.2332756 L0,48.7667244 Z M6.77406398,48.8145757 C6.77406398,25.6136345 25.5726448,6.80555556 48.7732607,6.80555556 C71.9687765,6.80555556 90.7724574,25.6128037 90.7724574,48.8145757 L90.7724574,49.1854243 C90.7724574,72.3863655 71.9738766,91.1944444 48.7732607,91.1944444 C25.5777448,91.1944444 6.77406398,72.3871963 6.77406398,49.1854243 L6.77406398,48.8145757 Z" id="Rectangle-1-Copy" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+                        <mask id="mask-2" sketch:name="Mask" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" sketch:type="MSShapeGroup" xlink:href="#path-1"></use>
+                        <path d="M64.6923111,64.3667689 L64.6923111,52.5375667 L64.7663162,52.5375667 L64.7663162,45.4624333 L64.6923111,45.4624333 L64.6923111,33.0069444 L57.6171776,33.0069444 L57.6171776,45.4624333 L39.9293438,45.4624333 L39.9293438,33.0069444 L32.8542103,33.0069444 L32.8542103,45.4624333 L32.7802051,45.4624333 L32.7802051,52.5375667 L32.8542103,52.5375667 L32.8542103,59.3487119 C35.0420132,59.3162358 37.3961373,59.4059262 39.9293356,59.6476776 L39.9293438,52.5375667 L57.6171776,52.5375667 L57.6171776,63.090662 C60.1593143,63.6536869 62.5130975,64.0724089 64.6923111,64.3667689 Z" id="Rectangle-2-Copy-2" fill="#FFFFFF" sketch:type="MSShapeGroup" mask="url(#mask-2)"></path>
+                        <g id="Path-64-Copy">
+                            <use fill="#31AAB7" fill-rule="evenodd" sketch:type="MSShapeGroup" mask="url(#mask-2)" xlink:href="#path-3"></use>
+                            <use fill="none" xlink:href="#path-3"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

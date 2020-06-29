@@ -1,0 +1,53 @@
+.print-only {
+  display: block;
+
+  &span, &b, &i, &small, &strong, &em, &a, &img, &button, &input, &label, &select, &textarea {
+    display: inline;
+  }
+}
+
+h1, h2, h3, h4, h5{
+  font-size: 85%;
+}
+
+.no-print {
+  display: none;
+}
+
+.print-page-break {
+  page-break-before: always;
+}
+
+tr, tbody tr, tbody tr:nth-child(even){
+  border-bottom: 1px solid #000;
+}
+
+body {
+  font: 'Roboto';
+  line-height: 1.3;
+}
+
+@page {
+  size: A4;
+  margin: 20mm 5mm 10mm 5mm;
+}
+
+p a {
+  word-wrap: break-word;
+}
+
+a {
+  color: #000;
+}
+
+p {
+  page-break-inside: avoid;
+}
+
+.request-details-print{
+  margin-top: -40px;
+}
+
+.logo{
+  margin-top: -10px;
+}

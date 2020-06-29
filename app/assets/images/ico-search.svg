@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>ico-search</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="web_raw_components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01-festival-wire-kit" transform="translate(-1123.000000, -3115.000000)" fill="#66B247">
+            <g id="//icons" transform="translate(800.000000, 2828.000000)">
+                <g id="nav" transform="translate(0.000000, 275.000000)">
+                    <g id="icon/ico-search" transform="translate(319.000000, 8.500000)">
+                        <path d="M16.6122081,15.1843844 L20.3374023,18.7844238 L18.9231888,20.1986374 L15.1999864,16.6005229 C14.030064,17.4792813 12.5758422,18 11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,12.5688446 17.4838955,14.0171466 16.6122081,15.1843844 Z M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z" id="Combined-Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

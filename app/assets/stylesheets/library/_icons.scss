@@ -1,0 +1,81 @@
+.add-icon {
+  background-color: #66B247;
+  -webkit-mask: image-url("ico-add.svg");
+  mask-image: image-url("ico-add.svg");
+}
+.budget-icon {
+  background-color: #66B247;
+  -webkit-mask: image-url("ico-budget.svg") no-repeat 50% 50%;
+  mask-image: image-url("ico-budget.svg") no-repeat 50% 50%;
+}
+.calendar-icon {
+  background-color: #66B247;
+  -webkit-mask: image-url("ico-cal.svg") no-repeat 50% 50%;
+  mask-image: image-url("ico-cal.svg") no-repeat 50% 50%;
+}
+.close-icon {
+  background-color: #66B247;
+  -webkit-mask: image-url("ico-close.svg") no-repeat 50% 50%;
+  mask-image: image-url("ico-close.svg") no-repeat 50% 50%;
+}
+.info-icon {
+  background: image-url("ico-info.svg") no-repeat center center;
+
+}
+.jpg-icon {
+  background: image-url("ico-jpg.svg") no-repeat center center;
+}
+.menu-icon {
+  background-color: #66B247;
+  -webkit-mask: image-url("ico-menu.svg") no-repeat 50% 50%;
+  mask-image: image-url("ico-menu.svg") no-repeat 50% 50%;
+}
+.organization-icon {
+  background-color: #66B247;
+  -webkit-mask: image-url("ico-organization.svg") no-repeat 50% 50%;
+  mask-image: image-url("ico-organization.svg") no-repeat 50% 50%;
+}
+.pdf-icon {
+  background: image-url("ico-pdf.svg") no-repeat center center;
+}
+.request-icon {
+  background-color: #66B247;
+  -webkit-mask: image-url("ico-request.svg") no-repeat 50% 50%;
+  mask-image: image-url("ico-request.svg") no-repeat 50% 50%;
+}
+.search-icon {
+  background-color: #66B247;
+  -webkit-mask: image-url("ico-search.svg") no-repeat 50% 50%;
+  mask-image: image-url("ico-search.svg") no-repeat 50% 50%;
+}
+.setting-icon {
+  background-color: #66B247;
+  -webkit-mask: image-url("ico-setting.svg") no-repeat 50% 50%;
+  mask-image: image-url("ico-setting.svg") no-repeat 50% 50%;
+}
+.template-icon {
+  background-color: #66B247;
+  -webkit-mask: image-url("ico-template.svg") no-repeat 50% 50%;
+  mask-image: image-url("ico-template.svg") no-repeat 50% 50%;
+  height: 35px !important;
+}
+.warn-icon {
+  background: image-url("ico-warn.svg") no-repeat center center;
+}
+
+.icon {
+  -webkit-mask-size: cover;
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+  &.small {
+    width: 25px;
+    height: 25px;
+  }
+  // # TODO: (2018-02-11) jon => check if this still works
+  .shrink {
+    transform: scale(0.5, 0.5);
+  }
+}

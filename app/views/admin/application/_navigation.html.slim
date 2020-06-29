@@ -1,0 +1,20 @@
+/ # Navigation
+
+/ This partial is used to display the navigation in Administrate.
+/ By default, the navigation contains navigation links
+/ for all resources in the admin dashboard,
+/ as defined by the routes in the `admin/` namespace
+
+nav.navigation[role="navigation"]
+  / - Administrate::Namespace.new(namespace).resources.each do |resource|
+
+  - resources_for_sidebar_nav.each do |resource|
+    = link_to(                                                                \
+      display_resource_name(resource),                                        \
+      [namespace, resource.path],                                             \
+      class: "navigation__link navigation__link--#{nav_link_state(resource)}" \
+    )
+
+  hr
+
+  = link_to('Home', root_path, class: 'navigation__link navigate__link--inactive')
