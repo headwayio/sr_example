@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   }
   mount ActionCable.server => '/cable'
 
-  resources :chat, only: [:index]
+  get '/chat', to: 'chat#index'
   resources :users do
     member do
       get 'analytics_alias'

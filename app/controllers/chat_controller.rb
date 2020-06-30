@@ -1,4 +1,4 @@
-class StimulusReflexController < ApplicationController
+class ChatController < ApplicationController
   skip_authorization_check
 
   def index
